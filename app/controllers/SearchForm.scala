@@ -3,14 +3,7 @@ package controllers
 object SearchForm {
   import play.api.data.Forms._
   import play.api.data.Form
-
-  /**
-   * A form processing DTO that maps to the form below.
-   *
-   * Using a class specifically for form binding reduces the chances
-   * of a parameter tampering attack and makes code clearer.
-   */
-  case class Data(name: String, url: String, level: Int)
+  case class Data(opt1: String, opt2: String, opt3: Int, opt4: String)
 
   /**
    * The form definition for the "create a widget" form.
@@ -19,9 +12,10 @@ object SearchForm {
    */
   val form = Form(
     mapping(
-      "name" -> nonEmptyText,
-      "url" -> nonEmptyText,
-      "level" -> number(min = 1)
+      "opt1" -> nonEmptyText,
+      "opt2" -> nonEmptyText,
+      "opt3" -> number(min = 1),
+      "opt4" -> nonEmptyText
     )(Data.apply)(Data.unapply)
   )
 }

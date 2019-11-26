@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/alize/IdeaProjects/ACTUAL Projects/play-samples-play-scala-forms-example/conf/routes
-// @DATE:Sat Nov 23 14:39:51 EST 2019
+// @DATE:Tue Nov 26 08:53:28 EST 2019
 
 import play.api.mvc.Call
 
@@ -33,7 +33,7 @@ package controllers {
 
   
     // @LINE:10
-    def createSearch(): Call = {
+    def createReqSearch(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "search")
     }

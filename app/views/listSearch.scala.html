@@ -1,5 +1,6 @@
 @import views.html.helper.select
 @import views.html.helper.options
+@import views.html.helper.inputRadioGroup
 @(spells: Seq[Spell], form: Form[SearchForm.Data], postUrl: Call)(implicit request: MessagesRequestHeader)
 
   @main("Search") {
@@ -36,9 +37,13 @@
     @helper.form(postUrl) {
       @helper.CSRF.formField
 
-      @helper.inputText(form("name"))
-      @helper.inputText(form("url"))
-      @helper.inputText(form("level"))
+      @helper.inputText(form("opt1"))
+      @helper.inputText(form("opt2"))
+      @helper.inputText(form("opt3"))
+      @helper.inputRadioGroup(form("opt4"),
+      options = Seq("M"->"Male","F"->"Female"),
+        Symbol("_label") -> "Gender",
+        Symbol("_error") -> form("gender").error.map(_.withMessage("select gender")))
 
 
       <button>Create Req Search</button>

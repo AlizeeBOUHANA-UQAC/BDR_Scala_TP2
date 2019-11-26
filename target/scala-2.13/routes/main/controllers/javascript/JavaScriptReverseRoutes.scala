@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/alize/IdeaProjects/ACTUAL Projects/play-samples-play-scala-forms-example/conf/routes
-// @DATE:Sat Nov 23 14:39:51 EST 2019
+// @DATE:Tue Nov 26 08:53:28 EST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -39,8 +39,8 @@ package controllers.javascript {
 
   
     // @LINE:10
-    def createSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.SearchController.createSearch",
+    def createReqSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.SearchController.createReqSearch",
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "search"})

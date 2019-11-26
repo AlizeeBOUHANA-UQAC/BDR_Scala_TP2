@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/alize/IdeaProjects/ACTUAL Projects/play-samples-play-scala-forms-example/conf/routes
-// @DATE:Sat Nov 23 14:39:51 EST 2019
+// @DATE:Tue Nov 26 08:53:28 EST 2019
 
 package router
 
@@ -41,7 +41,7 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.SearchController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.SearchController.listSearch"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.SearchController.createSearch"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.SearchController.createReqSearch"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -87,15 +87,15 @@ class Routes(
   )
 
   // @LINE:10
-  private[this] lazy val controllers_SearchController_createSearch2_route = Route("POST",
+  private[this] lazy val controllers_SearchController_createReqSearch2_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search")))
   )
-  private[this] lazy val controllers_SearchController_createSearch2_invoker = createInvoker(
-    SearchController_0.createSearch,
+  private[this] lazy val controllers_SearchController_createReqSearch2_invoker = createInvoker(
+    SearchController_0.createReqSearch,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SearchController",
-      "createSearch",
+      "createReqSearch",
       Nil,
       "POST",
       this.prefix + """search""",
@@ -138,9 +138,9 @@ class Routes(
       }
   
     // @LINE:10
-    case controllers_SearchController_createSearch2_route(params@_) =>
+    case controllers_SearchController_createReqSearch2_route(params@_) =>
       call { 
-        controllers_SearchController_createSearch2_invoker.call(SearchController_0.createSearch)
+        controllers_SearchController_createReqSearch2_invoker.call(SearchController_0.createReqSearch)
       }
   
     // @LINE:13
