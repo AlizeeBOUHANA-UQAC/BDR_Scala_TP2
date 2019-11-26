@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\alize\IdeaProjects\ACTUAL Projects\play-samples-play-scala-forms-example\app\views\index.scala.html:6:43: value WidgetController is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m        <li>Please go to <a href="@routes.WidgetController.listWidgets">@routes.WidgetController.listWidgets</a></li>[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\alize\IdeaProjects\ACTUAL Projects\play-samples-play-scala-forms-example\app\views\index.scala.html:6:81: value WidgetController is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m        <li>Please go to <a href="@routes.WidgetController.listWidgets">@routes.WidgetController.listWidgets</a></li>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

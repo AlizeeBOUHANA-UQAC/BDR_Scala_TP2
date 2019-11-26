@@ -1,0 +1,46 @@
+@import views.html.helper.select
+@import views.html.helper.options
+@(spells: Seq[Spell], form: Form[SearchForm.Data], postUrl: Call)(implicit request: MessagesRequestHeader)
+
+  @main("Search") {
+
+    <h1>Search</h1>
+
+    @* Flash shows updates to a page *@
+    @request.flash.data.map{ case (name, value) =>
+      <div>@name: @value</div>
+    }
+
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Level</th><th>URL</th>
+      </thead>
+      <tbody>
+      @for(w <- spells) {
+        <tr><td>@w.name</td><td>Level @w.level</td><td><a href="@w.url">@w.url</a></td></tr>
+      }
+      </tbody>
+    </table>
+
+    <hr/>
+
+    @* Global errors are not tied to any particular form field *@
+    @if(form.hasGlobalErrors) {
+      @form.globalErrors.map { error: FormError =>
+        <div>
+          @error.key: @error.message
+        </div>
+      }
+    }
+
+    @helper.form(postUrl) {
+      @helper.CSRF.formField
+
+      @helper.inputText(form("name"))
+      @helper.inputText(form("url"))
+      @helper.inputText(form("level"))
+
+
+      <button>Create Req Search</button>
+    }
+  }
