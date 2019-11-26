@@ -1,4 +1,29 @@
 [debug] "not up to date. inChanged = true, force = false
 [debug] Updating ProjectRef(uri("file:/C:/Users/alize/IdeaProjects/ACTUAL%20Projects/play-samples-play-scala-forms-example/"), "root")...
-[debug] Done updating ProjectRef(uri("file:/C:/Users/alize/IdeaProjects/ACTUAL%20Projects/play-samples-play-scala-forms-example/"), "root")
-[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+[error] lmcoursier.internal.shaded.coursier.error.FetchError$DownloadingArtifacts: Error fetching artifacts:
+[error] https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.5/hadoop-mapreduce-client-core-2.6.5-javadoc.jar: wrong checksum: C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-mapreduce-client-core\2.6.5\hadoop-mapreduce-client-core-2.6.5-javadoc.jar (expected SHA-1 14952554e1e3c90064ebc1e547ed1a5f5af3271a in C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-mapreduce-client-core\2.6.5\.hadoop-mapreduce-client-core-2.6.5-javadoc.jar__sha1, got 94ab0ba0eeb1e0759ec4daafac3cd120eaf2f8e6)
+[error] https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5-javadoc.jar: wrong checksum: C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-yarn-api\2.6.5\hadoop-yarn-api-2.6.5-javadoc.jar (expected SHA-1 44b3d72b1c6b7f5cb233599b6a1c71502d6fed34 in C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-yarn-api\2.6.5\.hadoop-yarn-api-2.6.5-javadoc.jar__sha1, got 7423bff00a6f005f73ec1ae7b5cb6a6deccc6c2e)
+[error] 
+[error] 	at lmcoursier.internal.shaded.coursier.Artifacts$.$anonfun$fetchArtifacts$8(Artifacts.scala:359)
+[error] 	at lmcoursier.internal.shaded.coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+[error] 	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+[error] 	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+[error] 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+[error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[error] 	at java.lang.Thread.run(Thread.java:748)
+[error] Caused by: lmcoursier.internal.shaded.coursier.cache.ArtifactError$WrongChecksum: wrong checksum: C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-mapreduce-client-core\2.6.5\hadoop-mapreduce-client-core-2.6.5-javadoc.jar (expected SHA-1 14952554e1e3c90064ebc1e547ed1a5f5af3271a in C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-mapreduce-client-core\2.6.5\.hadoop-mapreduce-client-core-2.6.5-javadoc.jar__sha1, got 94ab0ba0eeb1e0759ec4daafac3cd120eaf2f8e6)
+[error] 	at lmcoursier.internal.shaded.coursier.cache.FileCache.$anonfun$validateChecksum$4(FileCache.scala:749)
+[error] 	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+[error] 	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+[error] 	at scala.util.Success.map(Try.scala:213)
+[error] 	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+[error] 	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+[error] 	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+[error] 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+[error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[error] 	at java.lang.Thread.run(Thread.java:748)
+[error] (updateClassifiers) lmcoursier.internal.shaded.coursier.error.FetchError$DownloadingArtifacts: Error fetching artifacts:
+[error] https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.5/hadoop-mapreduce-client-core-2.6.5-javadoc.jar: wrong checksum: C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-mapreduce-client-core\2.6.5\hadoop-mapreduce-client-core-2.6.5-javadoc.jar (expected SHA-1 14952554e1e3c90064ebc1e547ed1a5f5af3271a in C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-mapreduce-client-core\2.6.5\.hadoop-mapreduce-client-core-2.6.5-javadoc.jar__sha1, got 94ab0ba0eeb1e0759ec4daafac3cd120eaf2f8e6)
+[error] https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5-javadoc.jar: wrong checksum: C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-yarn-api\2.6.5\hadoop-yarn-api-2.6.5-javadoc.jar (expected SHA-1 44b3d72b1c6b7f5cb233599b6a1c71502d6fed34 in C:\Users\alize\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\apache\hadoop\hadoop-yarn-api\2.6.5\.hadoop-yarn-api-2.6.5-javadoc.jar__sha1, got 7423bff00a6f005f73ec1ae7b5cb6a6deccc6c2e)
